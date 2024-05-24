@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="perfilClienteAnchorPane" prefHeight="540.0" prefWidth="940.0" style="-fx-background-color: #212F3C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ConsultaClienteController">
+   <children>
+      <Rectangle id="fondoRectangle" arcHeight="30.0" arcWidth="30.0" fill="#dddddd" height="459.0" layoutX="151.0" layoutY="42.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="633.0" />
+      <Label id="nombreLabel" layoutX="327.0" layoutY="115.0" text="Nombre(s)" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label id="apellidoPaternoLabel" layoutX="327.0" layoutY="154.0" text="Apellido paterno" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label id="apellidoMaternoLabel" layoutX="325.0" layoutY="192.0" text="Apellido materno" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apellidoPaternoTextField" layoutX="441.0" layoutY="152.0" prefHeight="25.0" prefWidth="310.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="apellidoMaternoTextField" layoutX="441.0" layoutY="190.0" prefHeight="25.0" prefWidth="309.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="nombreTextField" layoutX="407.0" layoutY="113.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-radius: 10;" />
+      <Label id="correoLabel" layoutX="246.0" layoutY="231.0" text="Correo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="correoTextField" layoutX="303.0" layoutY="230.0" prefHeight="25.0" prefWidth="446.0" style="-fx-background-radius: 10;" />
+      <Label id="direccionLabel" layoutX="235.0" layoutY="272.0" text="Dirección" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="direccionTextField" layoutX="302.0" layoutY="270.0" prefHeight="25.0" prefWidth="449.0" style="-fx-background-radius: 10;" />
+      <Label id="celularLabel" layoutX="180.0" layoutY="311.0" text="Número de celular" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="celularTextField" layoutX="302.0" layoutY="309.0" prefHeight="25.0" prefWidth="450.0" style="-fx-background-radius: 10;" />
+      <Label id="membresiaLabel" layoutX="174.0" layoutY="350.0" text="Membresía afiliada" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="membresiaTextField" layoutX="302.0" layoutY="349.0" prefHeight="25.0" prefWidth="447.0" style="-fx-background-radius: 10;" />
+      <Circle id="fotoCircle" fill="#212f3c" layoutX="238.0" layoutY="142.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle id="fotoPerfilCircle" fill="WHITE" layoutX="239.0" layoutY="129.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse id="fotoFondoEllipse" fill="WHITE" layoutX="240.0" layoutY="187.0" radiusX="47.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label id="perfilLabel" layoutX="444.0" layoutY="55.0" text="Perfil" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button id="regresarButton" layoutX="174.0" layoutY="459.0" mnemonicParsing="false" style="-fx-background-color: #339999;" text="Regresar" textFill="WHITE" />
+   </children>
+</AnchorPane>

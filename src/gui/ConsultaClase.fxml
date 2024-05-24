@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="940.0" style="-fx-background-color: #212F3C;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.ConsultaClaseController">
+   <children>
+      <Label layoutX="79.0" layoutY="212.0" text="Tipo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="273.0" text="Capacidad" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="271.0" text="Hora inicio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldTipo" layoutX="65.0" layoutY="295.0" prefHeight="25.0" prefWidth="137.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txtFieldCapacidad" layoutX="69.0" layoutY="422.0" prefHeight="25.0" prefWidth="450.0" style="-fx-background-radius: 10;" />
+      <Label layoutX="74.0" layoutY="396.0" text="Entrenador" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cBoxEntrenador" layoutX="68.0" layoutY="173.0" prefHeight="25.0" prefWidth="447.0" style="-fx-background-radius: 10;" />
+      <Label layoutX="381.0" layoutY="271.0" text="Hora fin" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldHoraInicio" layoutX="221.0" layoutY="294.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txtFieldHoraFin" layoutX="375.0" layoutY="294.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 10;" />
+      <Label layoutX="76.0" layoutY="333.0" text="Precio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldPrecio" layoutX="68.0" layoutY="355.0" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="txtFieldEntrenador" layoutX="66.0" layoutY="234.0" prefHeight="25.0" prefWidth="447.0" style="-fx-background-radius: 10;" />
+      <Label layoutX="236.0" layoutY="333.0" text="Fecha de inicio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldFechaInicio" layoutX="226.0" layoutY="357.0" prefHeight="25.0" prefWidth="176.0" style="-fx-background-radius: 10;" />
+      <Button fx:id="btnActualizar" layoutX="655.0" layoutY="168.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #339999;" text="Actualizar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="656.0" layoutY="233.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #ffffff;" text="Cancelar clase" textFill="#167780">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="808.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #339999;" text="Regresar" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#167780" height="75.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="944.0" />
+      <Label layoutX="76.0" layoutY="115.0" text="Información de la clase" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="17.0" text="Registro de la clase" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
