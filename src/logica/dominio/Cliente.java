@@ -16,13 +16,15 @@ public class Cliente {
     private String correo;
     private String contrasena;
     private String numeroCelular;
+    private String membresia;
     private int estado;
-    private int idMembresia;
+    
 
     public Cliente() {
     }
 
-    public Cliente(int idCliente, String nombre, String apellidoPaterno, String apellidoMaterno, String direccion, String correo, String contrasena, String numeroCelular, int estado, int idMembresia) {
+    public Cliente(int idCliente, String nombre, String apellidoPaterno, String apellidoMaterno, String direccion, 
+            String correo, String contrasena, String numeroCelular, String membresia, int estado) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -31,11 +33,13 @@ public class Cliente {
         this.correo = correo;
         this.contrasena = contrasena;
         this.numeroCelular = numeroCelular;
+        this.membresia = membresia;
         this.estado = estado;
-        this.idMembresia = idMembresia;
+        
     }
 
-    public Cliente(String nombre, String apellidoPaterno, String apellidoMaterno, String direccion, String correo, String contrasena, String numeroCelular, int estado) {
+    public Cliente(String nombre, String apellidoPaterno, String apellidoMaterno, String direccion, String correo, 
+            String contrasena, String numeroCelular, int estado) {
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
@@ -53,7 +57,6 @@ public class Cliente {
     public int getIdCliente() {
         return idCliente;
     }
-
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
@@ -122,12 +125,12 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public int getIdMembresia() {
-        return idMembresia;
+    public String getMembresia() {
+        return membresia;
     }
 
-    public void setIdMembresia(int idMembresia) {
-        this.idMembresia = idMembresia;
+    public void setMembresia(String membresia) {
+        this.membresia = membresia;
     }
 
     @Override
@@ -148,7 +151,7 @@ public class Cliente {
         if (this.estado != other.estado) {
             return false;
         }
-        if (this.idMembresia != other.idMembresia) {
+        if (!Objects.equals(this.membresia, other.membresia)) {
             return false;
         }
         if (!Objects.equals(this.nombre, other.nombre)) {

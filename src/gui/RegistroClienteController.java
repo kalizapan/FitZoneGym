@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import logica.dominio.Cliente;
 import logica.DAO.ClienteDAO;
@@ -44,12 +45,16 @@ public class RegistroClienteController implements Initializable {
 
     @FXML
     private TextField txtfieldCelular;
+    
+    @FXML 
+    private ComboBox<String> cBoxMembresia;
 
     private ClienteDAO clienteDAO;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         clienteDAO = new ClienteDAO();
+        cBoxMembresia.getItems().addAll("Mensual", "Anual", "Semestral");
     }
 
     @FXML
@@ -62,8 +67,8 @@ public class RegistroClienteController implements Initializable {
             String contrasena = txtfieldContrasena.getText();
             String direccion = txtfieldDireccion.getText();
             String numeroCelular = txtfieldCelular.getText();
+            String membresia = cBoxMembresia.getValue();
             int estado =1;
-            int idMembresia = 1;
 
             if (nombre.isEmpty() || apellidoPaterno.isEmpty() || correo.isEmpty()) {
                 throw new IllegalArgumentException("Por favor, completa todos los campos obligatorios.");
@@ -77,7 +82,7 @@ public class RegistroClienteController implements Initializable {
             nuevoCliente.setDireccion(direccion);
             nuevoCliente.setNumeroCelular(numeroCelular);
             nuevoCliente.setEstado(estado);
-            nuevoCliente.setIdMembresia(idMembresia);
+            nuevoCliente.setMembresia(membresia);
 
             int filasAfectadas = clienteDAO.registrarCliente(nuevoCliente);
             if (filasAfectadas > 0) {

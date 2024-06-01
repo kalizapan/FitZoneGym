@@ -35,7 +35,6 @@ public class InicioSesionController {
 
     @FXML
     public void initialize() {
-
         ingresarButton.setOnAction(event -> handleIniciarSesion());
         crearCuentaButton.setOnAction(event -> handleRegistrarse());
     }
@@ -80,6 +79,11 @@ public class InicioSesionController {
             Parent root = loader.load();
             Stage newStage = new Stage();
             newStage.setScene(new Scene(root));
+            
+            // Obtener el controlador y pasarle el stage
+            ClienteController controller = loader.getController();
+            controller.setStage(newStage);
+            
             newStage.show();
             if (stage != null) {
                 stage.close();
@@ -95,6 +99,11 @@ public class InicioSesionController {
             Parent root = loader.load();
             Stage newStage = new Stage();
             newStage.setScene(new Scene(root));
+
+            // Obtener el controlador y pasarle el stage
+            AdministradorController controller = loader.getController();
+            controller.setPrimaryStage(newStage);
+
             newStage.show();
             if (stage != null) {
                 stage.close();

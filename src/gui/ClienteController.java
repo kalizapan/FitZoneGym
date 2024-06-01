@@ -1,5 +1,6 @@
 package gui;
 
+import java.io.IOException;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,7 +31,15 @@ public class ClienteController {
     @FXML
     private Button btnPerfil;
     
+    @FXML
+    private Button buttonCerrarSesion;
+    
     private final ClaseDAO claseDAO = new ClaseDAO();
+    private Stage stage;
+    
+    public void setStage(Stage stage) {
+    this.stage = stage;
+}
     
      private void loadClases() {
         List<Clase> clasesActivas = claseDAO.listarClasesActivas();
@@ -60,4 +69,21 @@ public class ClienteController {
             e.printStackTrace();
         }
     }
+    
+    @FXML
+    void cerrarSesion(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/InicioSesion.fxml"));
+            Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.show();
+            if (stage != null) {
+                stage.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

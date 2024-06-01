@@ -90,7 +90,7 @@
          </columns>
       </TableView>
 
-      <Button layoutX="3.0" layoutY="617.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #ffffff;" text="Cerrar sesión" textFill="#167780">
+      <Button fx:id="btnCerrarSesion" layoutX="3.0" layoutY="617.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #ffffff;" text="Cerrar sesión" textFill="#167780">
          <font>
             <Font size="14.0" />
          </font>

@@ -43,6 +43,9 @@ public class AdministradorController implements Initializable {
     private Button btnAddEntrenador;
 
     @FXML
+    private Button btnCerrarSesion;
+
+    @FXML
     private TableView<Cliente> tableMiembros;
 
     @FXML
@@ -197,7 +200,7 @@ public class AdministradorController implements Initializable {
             try {
                 Cliente clienteSeleccionado = tableMiembros.getSelectionModel().getSelectedItem();
                 if (clienteSeleccionado != null) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/ConsultarCliente.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/ConsultaCliente.fxml"));
                     Parent root = loader.load();
 
                     ConsultaClienteController controller = loader.getController();
@@ -215,6 +218,7 @@ public class AdministradorController implements Initializable {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+                mostrarAlertaError("Error al cargar la ventana de detalles del cliente: " + e.getMessage());
             }
         }
     }
@@ -247,6 +251,22 @@ public class AdministradorController implements Initializable {
         }
     }
 
+    @FXML
+    private void cerrarSesion(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/InicioSesion.fxml"));
+            Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.show();
+            if (primaryStage != null) {
+                primaryStage.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void mostrarAlertaError(String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setTitle("Error");
@@ -258,5 +278,5 @@ public class AdministradorController implements Initializable {
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
-
 }
+

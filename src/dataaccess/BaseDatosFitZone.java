@@ -14,8 +14,8 @@ public class BaseDatosFitZone {
         String database = "gymfitzone";
         String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false";
         
-        String user = "administradorCOIL";
-        String password = "veanda!666";
+        String user = "root";
+        String password = "VAMR030321";
         
         Connection conexion = null;
         try {

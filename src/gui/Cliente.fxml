@@ -19,12 +19,12 @@
             <Font name="Yu Gothic UI Semilight" size="32.0" />
          </font>
       </Label>
-      <Button fx:id="btnClases" layoutX="-23.0" layoutY="258.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #ffffff;" text="Clases" textFill="#167780" onAction="#handleClases">
+      <Button fx:id="btnClases" layoutX="-23.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleClases" prefHeight="35.0" prefWidth="153.0" style="-fx-background-color: #ffffff;" text="Clases" textFill="#167780">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnPerfil" layoutX="-28.0" layoutY="211.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #ffffff;" text="Perfil" textFill="#167780" onAction="#handlePerfil">
+      <Button fx:id="btnPerfil" layoutX="-28.0" layoutY="211.0" mnemonicParsing="false" onAction="#handlePerfil" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #ffffff;" text="Perfil" textFill="#167780">
          <font>
             <Font size="14.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="-7.0" layoutY="607.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: #ffffff;" text="Cerrar sesión" textFill="#167780">
+      <Button fx:id="buttonCerrarSesion" layoutX="-7.0" layoutY="607.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: #ffffff;" text="Cerrar sesión" textFill="#167780">
          <font>
             <Font size="14.0" />
          </font>

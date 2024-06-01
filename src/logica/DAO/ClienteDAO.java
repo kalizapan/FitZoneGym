@@ -33,8 +33,9 @@ public class ClienteDAO {
                         resultSet.getString("correo"),
                         resultSet.getString("contrasena"),
                         resultSet.getString("numeroCelular"),
-                        resultSet.getInt("estado"),
-                        resultSet.getInt("idMembresia")
+                        resultSet.getString("membresia"),
+                        resultSet.getInt("estado")
+                       
                 );
                 clientesActivos.add(cliente);
             }
@@ -123,7 +124,7 @@ public class ClienteDAO {
                 int filasAfectadas = 0;
                 try (Connection conexion = BaseDatosFitZone.getConnection();
                      PreparedStatement sentenciaPreparada = conexion.prepareStatement(
-                             "INSERT INTO Cliente (nombre, apellidoPaterno, apellidoMaterno, direccion, correo, contrasena, numeroCelular, estado, idMembresia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
+                             "INSERT INTO Cliente (nombre, apellidoPaterno, apellidoMaterno, direccion, correo, contrasena, numeroCelular, membresia, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
 
                     sentenciaPreparada.setString(1, cliente.getNombre());
                     sentenciaPreparada.setString(2, cliente.getApellidoPaterno());
@@ -132,7 +133,7 @@ public class ClienteDAO {
                     sentenciaPreparada.setString(5, cliente.getCorreo());
                     sentenciaPreparada.setString(6, cliente.getContrasena());
                     sentenciaPreparada.setString(7, cliente.getNumeroCelular());
-                    sentenciaPreparada.setInt(8, 1);
+                    sentenciaPreparada.setString(8, cliente.getMembresia());
                     sentenciaPreparada.setInt(9, 1);
 
                     filasAfectadas = sentenciaPreparada.executeUpdate();
@@ -159,7 +160,7 @@ public class ClienteDAO {
             int filasAfectadas = 0;
             try (Connection conexion = BaseDatosFitZone.getConnection();
                  PreparedStatement sentenciaPreparada = conexion.prepareStatement(
-                         "UPDATE Cliente SET nombre=?, apellidoPaterno=?, apellidoMaterno=?, direccion=?, correo=?, contrasena=?, numeroCelular=?, estado=?, idMembresia=? WHERE idCliente=?")) {
+                         "UPDATE Cliente SET nombre=?, apellidoPaterno=?, apellidoMaterno=?, direccion=?, correo=?, contrasena=?, numeroCelular=?, membresia=?, estado=? WHERE idCliente=?")) {
                 sentenciaPreparada.setString(1, cliente.getNombre());
                 sentenciaPreparada.setString(2, cliente.getApellidoPaterno());
                 sentenciaPreparada.setString(3, cliente.getApellidoMaterno());
@@ -167,8 +168,9 @@ public class ClienteDAO {
                 sentenciaPreparada.setString(5, cliente.getCorreo());
                 sentenciaPreparada.setString(6, cliente.getContrasena());
                 sentenciaPreparada.setString(7, cliente.getNumeroCelular());
+                sentenciaPreparada.setString(9, cliente.getMembresia());
                 sentenciaPreparada.setInt(8, cliente.getEstado());
-                sentenciaPreparada.setInt(9, cliente.getIdMembresia());
+                
                 sentenciaPreparada.setInt(10, cliente.getIdCliente());
 
                 filasAfectadas = sentenciaPreparada.executeUpdate();
@@ -216,8 +218,9 @@ public class ClienteDAO {
                             resultSet.getString("correo"),
                             resultSet.getString("contrasena"),
                             resultSet.getString("numeroCelular"),
-                            resultSet.getInt("estado"),
-                            resultSet.getInt("idMembresia")
+                            resultSet.getString("membresia"),
+                            resultSet.getInt("estado")
+                            
                     );
                 }
             }

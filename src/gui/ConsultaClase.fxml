@@ -8,8 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="940.0" style="-fx-background-color: #212F3C;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="gui.ConsultaClaseController">
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="940.0" style="-fx-background-color: #212F3C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ConsultaClaseController">
    <children>
       <Label layoutX="79.0" layoutY="212.0" text="Tipo" textFill="WHITE">
          <font>
@@ -64,7 +63,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="808.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #339999;" text="Regresar" textFill="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#167780" height="75.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="944.0" />
       <Label layoutX="76.0" layoutY="115.0" text="Información de la clase" textFill="WHITE">
          <font>

@@ -41,7 +41,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="809.0" layoutY="482.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #339999;" text="Regresar" textFill="WHITE" />
       <Label layoutX="73.0" layoutY="214.0" text="Apellido paterno" textFill="WHITE">
          <font>
             <Font size="14.0" />

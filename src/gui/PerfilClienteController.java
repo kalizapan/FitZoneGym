@@ -53,7 +53,7 @@ public class PerfilClienteController {
             correoField.setText(cliente.getCorreo());
             direccionField.setText(cliente.getDireccion());
             telefonoField.setText(cliente.getNumeroCelular());
-            membresiaField.setText(String.valueOf(cliente.getIdMembresia())); 
+            membresiaField.setText(cliente.getMembresia()); 
         }
     }
 

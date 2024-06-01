@@ -65,7 +65,7 @@ public class ConsultaClienteController implements Initializable {
             correoTextField.setText(cliente.getCorreo());
             direccionTextField.setText(cliente.getDireccion());
             celularTextField.setText(cliente.getNumeroCelular());
-            membresiaTextField.setText(String.valueOf(cliente.getIdMembresia()));
+            membresiaTextField.setText(cliente.getMembresia());
         } else {
             System.out.println("Error: El cliente es nulo en mostrarDetallesCliente.");
         }
@@ -97,7 +97,7 @@ public class ConsultaClienteController implements Initializable {
             cliente.setCorreo(correoTextField.getText().trim());
             cliente.setDireccion(direccionTextField.getText().trim());
             cliente.setNumeroCelular(celularTextField.getText().trim());
-            cliente.setIdMembresia(Integer.parseInt(membresiaTextField.getText().trim()));
+            cliente.setMembresia(membresiaTextField.getText().trim());
 
             ClienteDAO clienteDAO = new ClienteDAO();
             int filasAfectadas = clienteDAO.actualizarCliente(cliente);

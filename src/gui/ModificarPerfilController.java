@@ -52,7 +52,7 @@ public class ModificarPerfilController {
             contrasenaField.setText(cliente.getContrasena());
             direccionField.setText(cliente.getDireccion());
             telefonoField.setText(cliente.getNumeroCelular());
-            membresiaField.setText(String.valueOf(cliente.getIdMembresia())); 
+            membresiaField.setText(cliente.getMembresia()); 
         }
     }
 
@@ -83,7 +83,7 @@ public class ModificarPerfilController {
         cliente.setContrasena(contrasenaField.getText());
         cliente.setDireccion(direccionField.getText());
         cliente.setNumeroCelular(telefonoField.getText());
-        cliente.setIdMembresia(Integer.parseInt(membresiaField.getText())); 
+        cliente.setMembresia(membresiaField.getText()); 
 
         mostrarAlerta("Perfil actualizado", "Sus datos han sido actualizados.");
         
